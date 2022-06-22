@@ -9,9 +9,7 @@ H1{
     display: inline-flex;
     flex-direction: row;
     justify-content: space-around;
-   
     font-size: 60px;
-  
     margin-bottom: 0px;
     text-decoration: underline;
     width: 100%;
@@ -37,8 +35,11 @@ H1{
     width: 50%;
 }
 td {
+    border: 1px solid black;
     height: 100px;
     width: 100px;
+    font-size: 80px;
+    text-align: center;
     }
 .gameBoard{
     display: flex;
