@@ -1,5 +1,6 @@
 *{
     margin: 0px;
+    background-color: aqua;
 }
 H1{
     text-align: center;
@@ -34,16 +35,18 @@ H1{
     height: 80px;
     width: 50%;
 }
-td {
+.box {
     border: 1px solid black;
     height: 100px;
     width: 100px;
     font-size: 80px;
-    text-align: center;
+    background-color: white;
+    
     }
 .gameBoard{
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    align-content: center;
 }
 .button{
     height: 100px;
