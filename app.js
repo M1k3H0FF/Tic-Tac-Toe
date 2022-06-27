@@ -2,9 +2,9 @@ const gameBoard = {
     player1: ['X'],
     player2: ['O'],
     board: [
-        [0, 0, 0],
-        [0, 0, 0],
-        [0, 0, 0] 
+        [null, null, null],
+        [null, null, null],
+        [null, null, null] 
     ], 
     
 }
@@ -30,10 +30,22 @@ console.log(gameBoard)
 
 board.addEventListener("click", onBoardClick)
 
-
+function getRow(board, rowId){
+    return board[rowId]
+   }
+ function getColumn(board, columnId){
+    let column =[];
+    for (let i = 0; i < grid.length; i++){
+      let row = grid[i];
+      column.push(row[columnId]);
+    }
+    return column;
+}
+console.log(getRow())
+ console.log(getColumn)
 
 function onBoardClick(event) {  
-const id = event.target.id;
+    const id = event.target.id;
     if(currentPlayer === player1){
         event.target.innerHTML = 'X';
         currentPlayer = player2;
@@ -42,6 +54,7 @@ const id = event.target.id;
         currentPlayer = player1;
     }
 
+console.log(document.getElementById('box'))
  console.log(id)
 // //    updateState()
 // //    updateHTML()
@@ -51,11 +64,11 @@ const id = event.target.id;
 // //   } else {changePlayer()}
   
 }
- function boardCheck(){
-//      for(i = 0; i < board.length; i ++)
-//      if(board[i] !== ' '){
-//          onBoardClick()
-//      }
+ function boardCheck(arr){
+    for(let num = 0; num <= 9; num++)
+    if(arr.indexOf(num) === -1)
+    return false;
+    return true;
 }
 function checkWin(board){
     // for (let i = 0; i < board.length; i++);
